@@ -1,11 +1,12 @@
-# Soy Monica Luque
+# Soy Mónica Luque
 
-Web y experiencia interactiva para la sesion de claridad de Monica Luque.
+Web principal y experiencia interactiva para la sesión de claridad de Mónica Luque.
 
-## Netlify
+## Publicación en Netlify
 
-- Build command: dejar vacio
+- Build command: dejar vacío.
 - Publish directory: `.`
+- Web principal: `/`
 - Ruta principal del formulario: `/sesion-claridad/`
 
-El formulario envia las respuestas a `mon.luverdu@gmail.com` mediante FormSubmit y redirige a una pagina propia de confirmacion.
+El formulario envía las respuestas a `mon.luverdu@gmail.com` mediante FormSubmit y redirige a una página propia de confirmación.
