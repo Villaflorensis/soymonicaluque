@@ -349,6 +349,14 @@
         max-width: 460px;
       }
 
+      .services-visual {
+        height: clamp(360px, 48vw, 620px);
+        margin-bottom: 18px;
+        overflow: hidden;
+        border-radius: 32px;
+        background: var(--color-bg-soft);
+      }
+
       .services-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -578,6 +586,7 @@
 
         .hero-image,
         .about-image,
+        .services-visual,
         .cta-image {
           min-height: 360px;
           border-radius: 24px;
@@ -721,6 +730,13 @@
             Trabajo contigo desde la raíz: lo que comes, lo que absorbes, lo que te inflama, lo que te estresa y lo que tu etapa hormonal necesita.
           </p>
         </div>
+        <div class="services-visual">
+          <img
+            src="./assets/images/monica-universo-bienestar.webp"
+            alt="Universo visual de bienestar femenino, autocuidado y vida low-tox"
+            loading="lazy"
+          />
+        </div>
         <div class="services-grid">
           <article class="service-card">
             <span>01</span>
@@ -735,7 +751,7 @@
           <article class="service-card">
             <span>03</span>
             <h3>Vida low-tox y medición</h3>
-            <p>Reducción de tóxicos, rutinas de apoyo, aceites esenciales y herramientas como Zinzino cuando aportan claridad.</p>
+            <p>Reducción de tóxicos, rutinas de apoyo, aceites esenciales y herramientas de medición cuando aportan claridad.</p>
           </article>
         </div>
       </section>
@@ -763,8 +779,9 @@
           </div>
           <div class="cta-image">
             <img
-              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85"
-              alt="Alimentos frescos y naturales sobre una mesa"
+              src="./assets/images/monica-claridad-cta.webp"
+              alt="Escritorio luminoso con libreta, infusión y flores para una sesión de claridad"
+              loading="lazy"
             />
           </div>
         </div>
