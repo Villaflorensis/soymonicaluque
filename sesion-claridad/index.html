@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sesión de claridad hormonal y digestiva | Mónica Luque</title>
     <meta name="description" content="Valoración interactiva para mujeres que quieren entender sus señales hormonales, digestivas, energéticas e inflamatorias." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="journey-page">
-    <header class="topbar"><a class="brand" href="../index.html"><span>M</span>Mónica Luque</a><p>Sesión de claridad</p></header>
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Mónica Luque"><strong>Mónica Luque</strong><span>Nutrición femenina</span></a>
+      <p>Sesión de claridad</p>
+    </header>
     <main class="screen">
       <section class="copy">
         <p class="eyebrow" id="eyebrow">Antes de empezar</p>
@@ -17,7 +23,6 @@
         <div class="proof"><span>Digestivo</span><span>Hormonal</span><span>Energía</span><span>Inflamación</span></div>
         <div class="progress"><span id="progressText">Paso 1 de 7</span><i><b id="progressBar"></b></i></div>
       </section>
-
       <form id="leadForm" class="card" action="https://formsubmit.co/mon.luverdu@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nueva valoración para sesión de claridad" />
         <input type="hidden" name="_template" value="table" />
@@ -31,7 +36,6 @@
         <input type="hidden" name="apertura_enfoque" id="apertura_enfoque" />
         <input type="hidden" name="resultado_orientativo" id="resultado_orientativo" />
         <input type="hidden" name="puntuacion_orientativa" id="puntuacion_orientativa" />
-
         <div class="step active" data-step="1"><p>Por qué estás aquí</p><h2>He llegado a esta página porque...</h2><div class="choices single" data-group="motivo_llegada"><button type="button" data-score="2">Mi cuerpo ha cambiado y no entiendo por qué</button><button type="button" data-score="2">Mis síntomas se repiten y me condicionan</button><button type="button" data-score="2">Estoy cansada de probar cosas sueltas</button><button type="button" data-score="3">Necesito que alguien mire mi caso con orden</button></div></div>
         <div class="step" data-step="2"><p>Lo que ya no funciona</p><h2>Hasta ahora me he encontrado con...</h2><div class="choices multi" data-group="intentos_previos"><button type="button" data-score="1">Cambio cosas, pero no las sostengo</button><button type="button" data-score="2">Todo sale normal, pero yo no me siento bien</button><button type="button" data-score="1">La información me confunde más</button><button type="button" data-score="2">Necesito una estrategia, no otro consejo</button></div></div>
         <div class="step" data-step="3"><p>Tu etapa actual</p><h2>Ahora mismo me identifico más con...</h2><div class="choices single" data-group="etapa_vital"><button type="button" data-score="1">Tengo ciclo, pero noto síntomas o cambios</button><button type="button" data-score="1">Fertilidad, embarazo o posparto</button><button type="button" data-score="2">Perimenopausia o menopausia</button><button type="button" data-score="1">No sé ubicarlo, solo sé que algo cambió</button></div></div>
