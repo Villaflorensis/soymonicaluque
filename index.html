@@ -20,8 +20,9 @@
         --color-bg-soft: #EFE7DC;
         --color-text: #1F1B18;
         --color-muted: #6F6259;
-        --color-accent: #B99A7A;
-        --color-accent-dark: #8F735B;
+        --color-accent: #ff7456;
+        --color-accent-dark: #d95c42;
+        --color-highlight: #dddd6b;
         --color-border: #E4D8CB;
         --color-white: #FFFFFF;
         --color-black: #151515;
@@ -167,14 +168,16 @@
 
       .btn-primary {
         padding: 16px 28px;
-        color: var(--color-white);
-        background: var(--color-black);
+        color: var(--color-text);
+        background: var(--color-highlight);
+        border: 1px solid rgba(31, 27, 24, 0.08);
         transition: transform 0.25s ease, background 0.25s ease;
       }
 
       .btn-primary:hover {
         transform: translateY(-2px);
-        background: #000;
+        background: var(--color-accent);
+        color: var(--color-white);
       }
 
       .btn-secondary {
@@ -280,6 +283,10 @@
         color: var(--color-accent-dark);
       }
 
+      .feature:nth-of-type(2) .feature-icon {
+        color: var(--color-highlight);
+      }
+
       .feature h3,
       .service-card h3 {
         margin-bottom: 8px;
@@ -369,12 +376,13 @@
         background: rgba(255, 255, 255, 0.46);
         border: 1px solid var(--color-border);
         border-radius: 28px;
-        transition: transform 0.3s ease, background 0.3s ease;
+        transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
       }
 
       .service-card:hover {
         transform: translateY(-4px);
         background: rgba(255, 255, 255, 0.72);
+        border-color: rgba(255, 116, 86, 0.48);
       }
 
       .service-card span {
@@ -384,6 +392,10 @@
         font-size: 0.78rem;
         font-weight: 700;
         letter-spacing: 0.1em;
+      }
+
+      .service-card:nth-child(2) span {
+        color: var(--color-highlight);
       }
 
       .testimonial {
@@ -421,8 +433,12 @@
       }
 
       .dots span:first-child {
-        background: var(--color-black);
+        background: var(--color-accent);
         border-color: var(--color-black);
+      }
+
+      .dots span:nth-child(2) {
+        border-color: var(--color-accent);
       }
 
       .cta {
