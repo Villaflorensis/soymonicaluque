@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sesión de claridad hormonal y digestiva | Mónica Luque</title>
+    <title>Sesión gratuita para ordenar tu estado hormonal y digestivo | Mónica Luque</title>
     <meta name="description" content="Valoración interactiva para mujeres que quieren entender sus señales hormonales, digestivas, energéticas e inflamatorias." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
   <body class="journey-page">
     <header class="topbar">
       <a class="brand" href="../index.html" aria-label="Mónica Luque"><strong>Mónica Luque</strong><span>Nutrición femenina</span></a>
-      <p>Sesión de claridad</p>
+      <p>Sesión de claridad gratuita · 15 min</p>
     </header>
     <main class="screen">
       <section class="copy">
@@ -24,7 +24,7 @@
         <div class="progress"><span id="progressText">Paso 1 de 7</span><i><b id="progressBar"></b></i></div>
       </section>
       <form id="leadForm" class="card" action="https://academiaholos.es/monica-newsletter/api/leads" method="POST">
-        <input type="hidden" name="_subject" value="Nueva valoración para sesión de claridad" />
+        <input type="hidden" name="_subject" value="Nueva valoración para sesión de claridad gratuita" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="https://soymonicaluque.com/sesion-claridad/gracias.html" />
@@ -41,9 +41,9 @@
         <div class="step" data-step="3"><p>Tu etapa actual</p><h2>Ahora mismo me identifico más con...</h2><div class="choices single" data-group="etapa_vital"><button type="button" data-score="1">Tengo ciclo, pero noto síntomas o cambios</button><button type="button" data-score="1">Fertilidad, embarazo o posparto</button><button type="button" data-score="2">Perimenopausia o menopausia</button><button type="button" data-score="1">No sé ubicarlo, solo sé que algo cambió</button></div></div>
         <div class="step" data-step="4"><p>Señales del cuerpo</p><h2>Marca lo que te suena demasiado familiar.</h2><div class="choices multi" data-group="frases_identificacion"><button type="button" data-score="2">Hinchazón o digestión lenta</button><button type="button" data-score="2">Cansancio aunque duerma</button><button type="button" data-score="2">Ciclo, piel o ánimo cambiantes</button><button type="button" data-score="2">Inflamación, dolor o pesadez</button><button type="button" data-score="2">He probado cosas y no se sostienen</button></div></div>
         <div class="step" data-step="5"><p>Tu prioridad</p><h2>Si en 3 meses solo pudiera cambiar una cosa, sería...</h2><div class="choices single" data-group="prioridad_3_meses"><button type="button" data-score="2">Tener más energía y foco</button><button type="button" data-score="2">Desinflamarme y digerir mejor</button><button type="button" data-score="2">Entender mi etapa hormonal</button><button type="button" data-score="2">Volver a sentir control sin obsesionarme</button></div></div>
-        <div class="step" data-step="6"><p>Cómo empezar</p><h2>Para dejar de ir a ciegas necesito...</h2><div class="choices multi" data-group="apertura_enfoque"><button type="button" data-score="1">Nutrición integrativa clara y realista</button><button type="button" data-score="1">Revisión low-tox sin agobio</button><button type="button" data-score="1">Rutinas de descanso, estrés o foco</button><button type="button" data-score="1">Medición para no ir a ciegas</button></div></div>
-        <div class="step" data-step="7"><p>Lo que tus respuestas muestran</p><div id="resultado" class="result"></div><div class="contact"><h2>El siguiente paso es que revise tu mapa contigo.</h2><p>Déjame tus datos y recibiré tus respuestas para preparar personalmente una primera lectura de tu caso.</p><label>Nombre<input name="nombre" type="text" autocomplete="name" required /></label><label>Email<input name="email" type="email" autocomplete="email" required /></label><label>WhatsApp o teléfono<input name="telefono" type="tel" autocomplete="tel" /></label><label class="consent"><input type="checkbox" name="consentimiento_contacto" value="Acepto que Mónica contacte conmigo" required />Acepto que Mónica contacte conmigo para valorar mi solicitud.</label></div></div>
-        <div class="actions"><button type="button" class="ghost" id="prevStep">Anterior</button><button type="button" class="primary" id="nextStep">Siguiente</button><button type="submit" class="primary submit" id="submitLead">Quiero mi sesión de claridad</button></div><p class="hint" id="hint"></p>
+        <div class="step" data-step="6"><p>Cómo empezar</p><h2>Para dejar de ir a ciegas necesito...</h2><div class="choices multi" data-group="apertura_enfoque"><button type="button" data-score="1">Nutrición integrativa clara y realista</button><button type="button" data-score="1">Revisión low-tox sin agobio</button><button type="button" data-score="1">Rutinas de descanso, estrés o foco</button><button type="button" data-score="1">Seguimiento de síntomas o biomarcadores cuando aporte claridad</button></div></div>
+        <div class="step" data-step="7"><p>Lo que tus respuestas muestran</p><div id="resultado" class="result"></div><div class="contact"><h2>El siguiente paso es una sesión gratuita y breve de 15 minutos.</h2><p>Déjame tus datos y recibiré tus respuestas para preparar personalmente una primera lectura de tu caso. Esta sesión de claridad es gratuita y sirve para ordenar tu punto de partida, no para comprometerte con un proceso de pago.</p><label>Nombre<input name="nombre" type="text" autocomplete="name" required /></label><label>Email<input name="email" type="email" autocomplete="email" required /></label><label>WhatsApp o teléfono<input name="telefono" type="tel" autocomplete="tel" /></label><label class="consent"><input type="checkbox" name="consentimiento_contacto" value="Acepto que Mónica contacte conmigo" required />Acepto que Mónica contacte conmigo para valorar mi solicitud.</label></div></div>
+        <div class="actions"><button type="button" class="ghost" id="prevStep">Anterior</button><button type="button" class="primary" id="nextStep">Siguiente</button><button type="submit" class="primary submit" id="submitLead">Quiero mi sesión gratuita de 15 min</button></div><p class="hint" id="hint"></p>
       </form>
     </main>
     <script src="./script.js"></script>
