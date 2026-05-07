@@ -789,7 +789,8 @@ h1, h2, h3, p, blockquote { margin-top: 0; }
 @media (max-width: 980px) {
   .header-inner, .hero, .approach-layout, .features-grid, .symptoms-layout, .value-head, .intro-flow, .tools-layout, .route-head, .program-layout, .program-includes, .fit-layout, .decision, .lead-magnet-box, .cta-box { grid-template-columns: 1fr; }
   .header-inner { display: flex; justify-content: space-between; }
-  .nav, .btn-area { display: none; }
+  .nav, .header-cta { display: none; }
+  .btn-area { display: inline-flex; }
   .features-grid.compact { grid-template-columns: 1fr; }
   .program-layout {
     grid-template-areas:
