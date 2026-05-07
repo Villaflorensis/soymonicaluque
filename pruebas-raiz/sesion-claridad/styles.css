@@ -660,46 +660,35 @@ input:focus {
 
 @media (min-width: 981px) and (max-height: 820px) {
   .topbar {
-    min-height: 64px;
-    padding-block: .65rem;
-  }
-
-  .mark {
-    width: 34px;
-    height: 34px;
-  }
-
-  .brand strong {
-    font-size: .98rem;
-  }
-
-  .brand small,
-  .topbar p {
-    font-size: .66rem;
+    display: none;
   }
 
   .screen {
-    min-height: calc(100dvh - 64px);
-    padding-block: .75rem;
-    gap: clamp(1rem, 2.5vw, 2.7rem);
+    min-height: 100dvh;
+    grid-template-columns: minmax(0, .92fr) minmax(390px, .68fr);
+    padding-block: clamp(.8rem, 2vh, 1.45rem);
+    gap: clamp(1.1rem, 3.2vw, 3.6rem);
   }
 
   .copy h1 {
-    font-size: clamp(2.15rem, 3.9vw, 3.15rem);
+    max-width: 11.8ch;
+    font-size: clamp(2.55rem, 4.8vw, 4.25rem);
+    line-height: .9;
   }
 
   .copy > p:not(.eyebrow) {
     max-width: 540px;
-    font-size: .9rem;
-    line-height: 1.42;
+    font-size: .92rem;
+    line-height: 1.5;
   }
 
   .clarity-visual {
-    margin-top: .72rem;
+    width: min(548px, 100%);
+    margin-top: .9rem;
   }
 
   .clarity-visual img {
-    aspect-ratio: 16 / 5.65;
+    aspect-ratio: 16 / 7.15;
   }
 
   .clarity-visual figcaption {
@@ -709,23 +698,50 @@ input:focus {
   }
 
   .proof {
-    margin-top: .55rem;
+    width: min(548px, 100%);
+    margin-top: .62rem;
   }
 
   .pathway {
-    display: none;
+    width: min(548px, 100%);
+    display: grid;
+    margin-top: .68rem;
+  }
+
+  .pathway li {
+    min-height: 66px;
+    padding: .58rem .62rem;
+  }
+
+  .pathway strong {
+    font-size: .72rem;
+  }
+
+  .pathway em {
+    font-size: .6rem;
   }
 
   .progress {
+    width: min(548px, 100%);
     margin-top: .62rem;
   }
 
   .card {
-    height: min(580px, calc(100dvh - 96px));
+    height: min(540px, calc(100dvh - 112px));
+    align-self: start;
+    margin-top: .65rem;
   }
 
   .step h2 {
-    font-size: clamp(1.45rem, 2.3vw, 2rem);
+    font-size: clamp(1.65rem, 2.7vw, 2.45rem);
+  }
+
+  .choices button {
+    padding-block: .64rem;
+  }
+
+  .actions {
+    margin-top: .8rem;
   }
 }
 
