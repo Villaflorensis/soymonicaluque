@@ -20,33 +20,33 @@ const journeyCopy = [
   ],
   [
     "Lo que ya has intentado",
-    "El problema no es que no hayas hecho nada.",
-    "Muchas mujeres llegan después de probar piezas sueltas: comida, suplementos, descanso, analíticas, tóxicos, estrés o etapa hormonal. Falta una lectura completa antes de añadir otra decisión."
+    "No es falta de voluntad.",
+    "Muchas mujeres llegan después de probar piezas sueltas. Falta una lectura completa antes de añadir otra decisión."
   ],
   [
     "Tu momento vital",
-    "Tu etapa cambia la forma de interpretar tus síntomas.",
+    "Tu etapa cambia la lectura.",
     "No se mira igual un ciclo activo, un posparto, una perimenopausia o una menopausia. Tu contexto cambia la estrategia."
   ],
   [
     "Síntomas conectados",
-    "Lo digestivo, hormonal y energético no van por separado.",
-    "Cuando varias señales aparecen a la vez, no son datos sueltos: son un patrón. Primero hay que entenderlo para dejar de ir apagando fuegos."
+    "Nada va por separado.",
+    "Digestión, energía, ciclo, ánimo e inflamación suelen formar un patrón. Primero hay que entenderlo."
   ],
   [
     "Mirada a 3 meses",
-    "Un proceso permite observar, ajustar y sostener.",
-    "Una pauta puede orientar, pero muchas veces no basta. En 3 meses hay margen para ordenar prioridades y adaptar la estrategia a cómo responde tu cuerpo."
+    "Ordenar también es avanzar.",
+    "Una pauta puede orientar, pero muchas veces no basta. Hace falta ajustar según responde tu cuerpo."
   ],
   [
     "Primer paso",
-    "La claridad no es el final: es una puerta de entrada.",
-    "En una llamada breve vemos qué te preocupa, si puedo ayudarte y si tiene sentido observar, hacer una valoración integrativa o plantear un proceso."
+    "Primero una decisión clara.",
+    "En una llamada breve vemos si tiene sentido observar, hacer una valoración integrativa o plantear un proceso."
   ],
   [
     "Siguiente paso",
-    "Ahora tus respuestas ya dibujan un mapa inicial.",
-    "Déjame tus datos para recibir tus respuestas, revisar tu punto de partida y contactarte con una orientación honesta."
+    "Tus respuestas ya orientan.",
+    "Déjame tus datos para revisar tu punto de partida y contactarte con una orientación honesta."
   ],
 ];
 
