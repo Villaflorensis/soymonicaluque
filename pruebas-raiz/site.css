@@ -817,11 +817,24 @@ h1, h2, h3, p, blockquote { margin-top: 0; }
   .brand span { max-width: 178px; font-size: .52rem; line-height: 1.2; white-space: normal; overflow: visible; text-overflow: clip; }
   .header-actions { display: flex; }
   .header-cta {
+    display: none;
+  }
+  .btn-area {
+    display: inline-flex;
     min-height: 40px;
     width: auto;
     padding: 11px 14px;
+    color: var(--color-white);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 24px rgba(224, 111, 88, .22);
     font-size: .62rem;
     white-space: nowrap;
+  }
+  .btn-area:hover {
+    color: var(--color-white);
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
   }
   .eyebrow { max-width: 34ch; margin-bottom: 12px; font-size: .66rem; letter-spacing: .08em; }
   .hero-eyebrow { display: none; }
