@@ -1,12 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sesión de claridad · Método MÖN | Mónica Luque</title>
+    <title>Sesión de claridad estratégica · Método MÖN | Mónica Luque</title>
     <meta
       name="description"
-      content="Sesión de claridad gratuita para mujeres que quieren entender sus síntomas y valorar si necesitan una valoración integrativa o el Programa Cuerpo en Coherencia de 3 meses."
+      content="Sesión de claridad gratuita para mujeres que quieren ordenar síntomas, entender su punto de partida y valorar si necesitan una valoración integrativa o un proceso acompañado."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,44 +22,53 @@
         <span class="mark" aria-hidden="true">N</span>
         <span class="brand-copy"><strong>Mónica Luque</strong><small>Nutrición femenina integrativa</small></span>
       </a>
-      <p>Primero claridad. Después proceso.</p>
+      <p>Primero claridad. Después una decisión honesta.</p>
     </header>
 
     <main class="screen">
       <section class="copy" aria-labelledby="title">
-        <p class="eyebrow" id="eyebrow">Cuerpo en coherencia</p>
-        <h1 id="title">No necesitas otra dieta.</h1>
+        <p class="eyebrow" id="eyebrow">Sesión de claridad · 15 min · gratuita</p>
+        <h1 id="title">No necesitas otra prueba para empezar.</h1>
         <p id="body">
-          Necesitas entender qué está intentando decirte tu cuerpo y tener una estrategia que puedas sostener.
+          Necesitas ordenar qué está diciendo tu cuerpo y saber si lo más coherente ahora es observar mejor, pedir una valoración integrativa o iniciar un proceso acompañado.
         </p>
 
-        <div class="proof" aria-label="Áreas que se revisan">
-          <span>Digestión</span>
-          <span>Energía</span>
-          <span>Inflamación</span>
-          <span>Estado hormonal</span>
+        <figure class="clarity-visual">
+          <img
+            src="../assets/images/claridad-prueba-90.webp"
+            alt="Mesa luminosa con alimentos, libreta abierta, flores e infusión"
+            loading="eager"
+          />
+          <figcaption>No se trata de añadir más cosas, sino de entender qué tiene sentido mirar primero.</figcaption>
+        </figure>
+
+        <div class="proof" aria-label="Qué aporta la sesión">
+          <span>Sin venta agresiva</span>
+          <span>Lectura inicial</span>
+          <span>Siguiente paso honesto</span>
+          <span>15 min gratis</span>
         </div>
 
         <ol class="pathway" aria-label="Ruta de trabajo">
-          <li><span>01</span><strong>Claridad</strong><em>15 min · gratuita</em></li>
-          <li><span>02</span><strong>Valoración integrativa</strong><em>60 min · 70 €</em></li>
-          <li><span>03</span><strong>Cuerpo en Coherencia</strong><em>3 meses · 450 € · servicio principal</em></li>
-          <li><span>04</span><strong>Continuidad</strong><em>Posterior · solo si procede</em></li>
+          <li><span>01</span><strong>Claridad</strong><em>Ver si tiene sentido avanzar</em></li>
+          <li><span>02</span><strong>Valoración</strong><em>Leer tu caso con profundidad</em></li>
+          <li><span>03</span><strong>Proceso</strong><em>Ordenar y sostener cambios</em></li>
+          <li><span>04</span><strong>Continuidad</strong><em>Solo si tu caso lo necesita</em></li>
         </ol>
 
         <div class="progress">
-          <span id="progressText">Paso 1 de 7</span>
+          <span id="progressText">Pregunta 1 de 7</span>
           <i><b id="progressBar"></b></i>
         </div>
       </section>
 
       <form id="leadForm" class="card" action="https://app.soymonicaluque.com/api/public/clarity-leads" method="POST">
-        <input type="hidden" name="_subject" value="Nueva solicitud de claridad · Método MÖN" />
+        <input type="hidden" name="_subject" value="Nueva solicitud de claridad estratégica · Método MÖN" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://soymonicaluque.com/sesion-claridad/gracias.html" />
+        <input type="hidden" name="_next" value="https://soymonicaluque.com/pruebas-raiz/sesion-claridad/gracias.html" />
         <input type="hidden" name="servicio_objetivo" value="Programa Cuerpo en Coherencia · 3 meses" />
-        <input type="hidden" name="siguiente_paso" value="Sesión de claridad breve para valorar si tiene sentido una valoración integrativa" />
+        <input type="hidden" name="siguiente_paso" value="Sesión de claridad breve para orientar hacia observación, valoración integrativa o proceso acompañado" />
         <input type="hidden" name="valoracion_integrativa" value="70 euros, descontables si entra en el programa de 3 meses" />
         <input type="hidden" name="programa_3_meses" value="Programa Cuerpo en Coherencia de 3 meses, 450 euros" />
         <input type="hidden" name="motivo_llegada" id="motivo_llegada" />
@@ -72,8 +81,8 @@
         <input type="hidden" name="puntuacion_orientativa" id="puntuacion_orientativa" />
 
         <div class="step active" data-step="1">
-          <p>Por qué estás aquí</p>
-          <h2>He llegado a esta página porque...</h2>
+          <p>Tu punto de partida</p>
+          <h2>Ahora mismo necesito claridad porque...</h2>
           <div class="choices single" data-group="motivo_llegada">
             <button type="button" data-score="2">Mi cuerpo ha cambiado y no entiendo por qué</button>
             <button type="button" data-score="2">Mis síntomas se repiten y me condicionan</button>
@@ -83,7 +92,7 @@
         </div>
 
         <div class="step" data-step="2">
-          <p>Lo que ya no funciona</p>
+          <p>Lo que ya has intentado</p>
           <h2>Hasta ahora me he encontrado con...</h2>
           <div class="choices multi" data-group="intentos_previos">
             <button type="button" data-score="1">Cambio cosas, pero no las sostengo</button>
@@ -128,7 +137,7 @@
         </div>
 
         <div class="step" data-step="6">
-          <p>Cómo empezar</p>
+          <p>Qué necesitas ordenar</p>
           <h2>Para dejar de ir a ciegas necesito...</h2>
           <div class="choices multi" data-group="apertura_enfoque">
             <button type="button" data-score="1">Una lectura global de mi caso</button>
@@ -139,12 +148,12 @@
         </div>
 
         <div class="step" data-step="7">
-          <p>Lo que tus respuestas muestran</p>
+          <p>Tu orientación inicial</p>
           <div id="resultado" class="result"></div>
           <div class="contact">
-            <h2>Solicita tu sesión breve de claridad.</h2>
+            <h2>No necesitas venir con todo claro. Para eso es esta sesión.</h2>
             <p>
-              Déjame tus datos para recibir tus respuestas, revisar tu punto de partida y contactarte con el siguiente paso más coherente. En la sesión de claridad vemos si puedo ayudarte y si tiene sentido avanzar hacia una valoración integrativa.
+              Déjame tus datos para recibir tus respuestas, revisar tu punto de partida y contactarte con el siguiente paso más coherente. Si no tiene sentido avanzar conmigo, también te lo diré.
             </p>
             <label>Nombre<input name="nombre" type="text" autocomplete="given-name" required /></label>
             <label>Apellidos<input name="apellidos" type="text" autocomplete="family-name" required /></label>
@@ -161,7 +170,7 @@
         <div class="actions">
           <button type="button" class="ghost" id="prevStep">Anterior</button>
           <button type="button" class="primary" id="nextStep">Siguiente</button>
-          <button type="submit" class="primary submit" id="submitLead">Solicitar sesión de claridad</button>
+          <button type="submit" class="primary submit" id="submitLead">Solicitar mi sesión gratuita</button>
         </div>
         <p class="hint" id="hint"></p>
       </form>

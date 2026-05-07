@@ -1,4 +1,4 @@
-const form = document.querySelector("#leadForm");
+﻿const form = document.querySelector("#leadForm");
 const steps = [...document.querySelectorAll(".step")];
 const cards = [...document.querySelectorAll(".choices button")];
 const previousButton = document.querySelector("#prevStep");
@@ -14,14 +14,14 @@ const body = document.querySelector("#body");
 
 const journeyCopy = [
   [
-    "Cuerpo en coherencia",
-    "No necesitas otra dieta.",
-    "Necesitas entender qué está intentando decirte tu cuerpo y tener una estrategia que puedas sostener."
+    "Sesión de claridad · 15 min · gratuita",
+    "No necesitas otra prueba para empezar.",
+    "Necesitas ordenar qué está diciendo tu cuerpo y saber si lo más coherente ahora es observar mejor, pedir una valoración integrativa o iniciar un proceso acompañado."
   ],
   [
-    "La pista importante",
+    "Lo que ya has intentado",
     "El problema no es que no hayas hecho nada.",
-    "Muchas mujeres llegan después de probar piezas sueltas: comida, suplementos, descanso, analíticas, tóxicos, estrés o etapa hormonal. Falta una lectura completa."
+    "Muchas mujeres llegan después de probar piezas sueltas: comida, suplementos, descanso, analíticas, tóxicos, estrés o etapa hormonal. Falta una lectura completa antes de añadir otra decisión."
   ],
   [
     "Tu momento vital",
@@ -40,13 +40,13 @@ const journeyCopy = [
   ],
   [
     "Primer paso",
-    "La claridad no es el final: es la puerta de entrada.",
-    "En una llamada breve vemos qué te preocupa, si puedo ayudarte y si tiene sentido hacer una valoración integrativa antes de iniciar un proceso."
+    "La claridad no es el final: es una puerta de entrada.",
+    "En una llamada breve vemos qué te preocupa, si puedo ayudarte y si tiene sentido observar, hacer una valoración integrativa o plantear un proceso."
   ],
   [
     "Siguiente paso",
     "Ahora tus respuestas ya dibujan un mapa inicial.",
-    "Déjame tus datos para recibir tus respuestas, revisar tu punto de partida y contactarte con el siguiente paso más coherente."
+    "Déjame tus datos para recibir tus respuestas, revisar tu punto de partida y contactarte con una orientación honesta."
   ],
 ];
 
@@ -103,7 +103,7 @@ function updateHiddenFields() {
 function updateResult() {
   const currentScore = score();
   const message = currentMessage();
-  const action = "Lo que has marcado no habla de síntomas sueltos. Habla de un cuerpo que necesita orden, lectura global y una estrategia adaptada. El primer paso es solicitar una sesión breve de claridad para ver si tiene sentido hacer una valoración integrativa y, si encaja, trabajar juntas durante 3 meses.";
+  const action = "Lo que has marcado no habla de síntomas sueltos. Habla de un cuerpo que necesita orden y una lectura global antes de sumar otra prueba, pauta o suplemento. El primer paso es solicitar una sesión breve de claridad para decidir si tiene sentido observar mejor, hacer una valoración integrativa o plantear un proceso.";
   result.innerHTML = `<strong>${message.title}</strong><p>${message.text}</p><p>${action}</p>`;
   hidden.resultado_orientativo.value = `${message.title} ${message.text} ${action} Puntuación orientativa: ${currentScore}.`;
   hidden.puntuacion_orientativa.value = String(currentScore);
@@ -119,7 +119,7 @@ function setStep(step) {
   steps.forEach((item) => item.classList.toggle("active", Number(item.dataset.step) === currentStep));
 
   const progress = Math.round((currentStep / steps.length) * 100);
-  progressText.textContent = `Paso ${currentStep} de ${steps.length}`;
+  progressText.textContent = `Pregunta ${currentStep} de ${steps.length}`;
   progressBar.style.width = `${progress}%`;
 
   const copy = journeyCopy[currentStep - 1];
@@ -173,7 +173,7 @@ form.addEventListener("submit", async (event) => {
   updateHiddenFields();
   updateResult();
   submitButton.disabled = true;
-  hint.textContent = "Enviando tu valoración...";
+    hint.textContent = "Enviando tu solicitud...";
   try {
     const response = await fetch(form.action, {
       method: "POST",
@@ -181,9 +181,9 @@ form.addEventListener("submit", async (event) => {
       body: JSON.stringify(Object.fromEntries(new FormData(form)))
     });
     if (!response.ok) throw new Error("No se ha podido enviar la valoración.");
-    window.location.href = "https://soymonicaluque.com/sesion-claridad/gracias.html";
+    window.location.href = "https://soymonicaluque.com/pruebas-raiz/sesion-claridad/gracias.html";
   } catch (error) {
-    hint.textContent = error.message || "No se ha podido enviar la valoración. Inténtalo de nuevo.";
+    hint.textContent = error.message || "No se ha podido enviar la solicitud. Inténtalo de nuevo.";
     submitButton.disabled = false;
   }
 });

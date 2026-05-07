@@ -140,8 +140,8 @@ input {
   width: min(100%, 1220px);
   min-height: calc(100dvh - 86px);
   display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(420px, .82fr);
-  align-items: center;
+  grid-template-columns: minmax(0, .92fr) minmax(420px, .78fr);
+  align-items: start;
   gap: clamp(1.5rem, 4vw, 4rem);
   margin: 0 auto;
   padding: clamp(1.5rem, 4vw, 3rem);
@@ -170,9 +170,9 @@ input {
   margin: 0 0 1.1rem;
   color: var(--ink);
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(3.15rem, 7vw, 6.2rem);
+  font-size: clamp(2.9rem, 5.6vw, 5.05rem);
   font-weight: 500;
-  line-height: .92;
+  line-height: .94;
   letter-spacing: 0;
 }
 
@@ -184,12 +184,49 @@ input {
   overflow-wrap: break-word;
 }
 
+.clarity-visual {
+  position: relative;
+  width: min(620px, 100%);
+  margin: 1.55rem 0 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.clarity-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: 50% 54%;
+}
+
+.clarity-visual figcaption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  padding: .78rem .9rem;
+  color: var(--ink);
+  background: rgba(255, 253, 248, .88);
+  border: 1px solid rgba(226, 213, 198, .82);
+  border-radius: 10px;
+  box-shadow: var(--shadow-small);
+  font-size: .86rem;
+  font-weight: 760;
+  line-height: 1.35;
+  backdrop-filter: blur(8px);
+}
+
 .proof {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: .6rem;
   width: min(650px, 100%);
-  margin-top: 1.8rem;
+  margin-top: 1rem;
 }
 
 .proof span {
@@ -292,6 +329,7 @@ input {
   border-radius: 20px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
+  margin-top: .4rem;
 }
 
 .card.is-contact-step {
@@ -605,7 +643,11 @@ input:focus {
   }
 
   .copy h1 {
-    font-size: clamp(2.9rem, 10vw, 4.9rem);
+    font-size: clamp(2.55rem, 9.2vw, 4.3rem);
+  }
+
+  .clarity-visual {
+    width: 100%;
   }
 
   .proof {
@@ -650,7 +692,7 @@ input:focus {
   }
 
   .copy h1 {
-    max-width: 9.5ch;
+    max-width: 11.5ch;
     font-size: clamp(2.55rem, 12vw, 3.05rem);
   }
 
@@ -659,8 +701,34 @@ input:focus {
     font-size: .95rem;
   }
 
+  .clarity-visual {
+    margin-top: 1.1rem;
+    border-radius: 16px;
+  }
+
+  .clarity-visual img {
+    aspect-ratio: 4 / 5;
+    object-position: 49% 52%;
+  }
+
+  .clarity-visual figcaption {
+    position: static;
+    border-width: 1px 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: .82rem;
+  }
+
   .proof {
-    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: .45rem;
+  }
+
+  .proof span {
+    min-height: 38px;
+    padding: .5rem .45rem;
+    font-size: .72rem;
+    text-align: center;
   }
 
   .pathway {
