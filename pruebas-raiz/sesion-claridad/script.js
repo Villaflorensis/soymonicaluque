@@ -8,9 +8,14 @@ const hint = document.querySelector("#hint");
 const result = document.querySelector("#resultado");
 const progressText = document.querySelector("#progressText");
 const progressBar = document.querySelector("#progressBar");
+const cardProgressText = document.querySelector("#cardProgressText");
+const cardProgressBar = document.querySelector("#cardProgressBar");
 const eyebrow = document.querySelector("#eyebrow");
 const title = document.querySelector("#title");
 const body = document.querySelector("#body");
+const cardEyebrow = document.querySelector("#cardEyebrow");
+const cardTitle = document.querySelector("#cardTitle");
+const cardBody = document.querySelector("#cardBody");
 
 const journeyCopy = [
   [
@@ -114,18 +119,23 @@ function isComplete() {
   return Boolean(document.querySelector(`.step[data-step="${currentStep}"] button.selected`));
 }
 
-function setStep(step) {
+function setStep(step, shouldScroll = false) {
   currentStep = Math.max(1, Math.min(step, steps.length));
   steps.forEach((item) => item.classList.toggle("active", Number(item.dataset.step) === currentStep));
 
   const progress = Math.round((currentStep / steps.length) * 100);
   progressText.textContent = `Pregunta ${currentStep} de ${steps.length}`;
   progressBar.style.width = `${progress}%`;
+  cardProgressText.textContent = `Pregunta ${currentStep} de ${steps.length}`;
+  cardProgressBar.style.width = `${progress}%`;
 
   const copy = journeyCopy[currentStep - 1];
   eyebrow.textContent = copy[0];
   title.textContent = copy[1];
   body.textContent = copy[2];
+  cardEyebrow.textContent = copy[0];
+  cardTitle.textContent = copy[1];
+  cardBody.textContent = copy[2];
 
   previousButton.hidden = currentStep === 1;
   nextButton.hidden = currentStep === steps.length;
@@ -136,6 +146,10 @@ function setStep(step) {
   hint.textContent = "";
   updateHiddenFields();
   updateResult();
+
+  if (shouldScroll && window.matchMedia("(max-width: 640px)").matches) {
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 cards.forEach((card) => {
@@ -163,10 +177,10 @@ nextButton.addEventListener("click", () => {
     hint.textContent = "Elige al menos una opción para seguir.";
     return;
   }
-  setStep(currentStep + 1);
+  setStep(currentStep + 1, true);
 });
 
-previousButton.addEventListener("click", () => setStep(currentStep - 1));
+previousButton.addEventListener("click", () => setStep(currentStep - 1, true));
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();

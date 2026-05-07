@@ -319,6 +319,10 @@ input {
   transition: width .28s ease;
 }
 
+.card-progress {
+  display: none;
+}
+
 .card {
   min-width: 0;
   height: min(620px, calc(100dvh - 112px));
@@ -338,6 +342,10 @@ input {
   height: auto;
   max-height: none;
   overflow: visible;
+}
+
+.step-context {
+  display: none;
 }
 
 .step {
@@ -749,35 +757,26 @@ input:focus {
   }
 
   .topbar {
-    align-items: flex-start;
-    padding: .9rem;
-  }
-
-  .mark {
-    width: 36px;
-    height: 36px;
-  }
-
-  .brand strong {
-    font-size: .98rem;
-  }
-
-  .brand small {
-    font-size: .62rem;
+    display: none;
   }
 
   .screen {
     width: 100%;
     max-width: 100vw;
+    min-height: 100dvh;
+    align-items: center;
     overflow-x: hidden;
-    padding: 1rem;
-    gap: 1rem;
+    padding: .7rem .8rem;
+    gap: 0;
   }
 
-  .copy,
   .card {
     width: 100%;
     max-width: 100%;
+  }
+
+  .copy {
+    display: none;
   }
 
   .copy h1 {
@@ -808,36 +807,92 @@ input:focus {
   }
 
   .card {
-    padding: 1rem;
-    border-radius: 16px;
+    padding: .78rem;
+    border-radius: 14px;
+  }
+
+  .card-progress {
+    display: block;
+    width: 100%;
+    margin: 0 0 .55rem;
+    font-size: .76rem;
+  }
+
+  .card-progress i {
+    margin-top: .32rem;
+  }
+
+  .step-context {
+    display: grid;
+    gap: .24rem;
+    margin-bottom: .65rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .step-context p {
+    margin: 0;
+    color: var(--brand-dark);
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .step-context strong {
+    color: var(--ink);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.35rem, 7vw, 1.78rem);
+    font-weight: 600;
+    line-height: 1.02;
+  }
+
+  .step-context span {
+    color: var(--muted);
+    font-size: .8rem;
+    line-height: 1.35;
+  }
+
+  .step > p {
+    display: none;
   }
 
   .step h2 {
-    font-size: 1.55rem;
+    margin-bottom: .55rem;
+    font-size: 1.34rem;
+    line-height: 1.02;
     overflow-wrap: anywhere;
   }
 
   .choices {
-    gap: .55rem;
+    gap: .42rem;
   }
 
   .choices button {
-    padding: .75rem 2.75rem .75rem .8rem;
+    padding: .56rem 2.35rem .56rem .7rem;
     border-radius: 8px;
-    font-size: .9rem;
+    font-size: .82rem;
+    line-height: 1.2;
     white-space: normal;
     overflow-wrap: break-word;
   }
 
+  .choices button::after {
+    right: .72rem;
+    width: 19px;
+    height: 19px;
+  }
+
   .actions {
     gap: .5rem;
+    margin-top: .65rem;
   }
 
   .actions button,
   .button {
-    min-height: 44px;
-    padding: .65rem .8rem;
-    font-size: .78rem;
+    min-height: 40px;
+    padding: .55rem .72rem;
+    font-size: .76rem;
   }
 
   .thanks-hero {
