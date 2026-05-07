@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/sesion-claridad"
+  to = "/sesion-claridad/"
+  status = 301

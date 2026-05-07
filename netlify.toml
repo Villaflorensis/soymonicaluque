@@ -5,3 +5,13 @@
   from = "/sesion-claridad"
   to = "/sesion-claridad/"
   status = 301
+
+[[redirects]]
+  from = "/pruebas-raiz"
+  to = "/pruebas-raiz/"
+  status = 301
+
+[[redirects]]
+  from = "/pruebas-raiz/sesion-claridad"
+  to = "/pruebas-raiz/sesion-claridad/"
+  status = 301
