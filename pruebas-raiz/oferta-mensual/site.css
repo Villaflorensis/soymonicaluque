@@ -669,12 +669,7 @@ h1, h2, h3, p, blockquote { margin-top: 0; }
 }
 
 .monthly-bottom {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.monthly-summary {
-  background: linear-gradient(180deg, rgba(231, 238, 226, .95), rgba(255, 250, 245, .72));
-  border-color: rgba(137, 145, 115, .34);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .fit-section {
